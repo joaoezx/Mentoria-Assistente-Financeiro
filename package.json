@@ -1,0 +1,15 @@
+{
+  "name": "mentoria-assistente-financeiro",
+  "version": "1.0.0",
+  "description": "<h1>Assintente Financeiro</h1>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^6.1.0"
+  }
+}
