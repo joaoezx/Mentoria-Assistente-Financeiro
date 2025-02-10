@@ -8,28 +8,40 @@
 
     <body>
         <script src="./src/index.js" type="module"></script>
-        <header id="intput and output">
-            <h1>
+
+
+        <header >
+            <h1 class="logo">
                 AI personal financial
             </h1>
         </header>
-        <section id="intput and output" class="intputAndOutput" >
-            <section id=" intput"></section>
-            <section id="output"></section>
-            <button id="enterbutton"> enter</button>
-            
-        </section>
-        <section id="bankBalanceInformations">
-            <section id="balance"></section>
-            <section id="future"></section>
-            <section id="past"></section>
 
+
+        <div id="intputAndOutput" class="inputAndOutput" >
+            <div id="input" class="textOutput"></div>
+            <div id="output" class="textInput">
+                <button class="enterButton">enter</button>
+            </div>
+            
+            
+        </div>
+
+
+        <section class="bankBalanceInformations">
+            <section class="balance"></section>
+            <section class="future"></section>
+            <section class="past"></section>
         </section>
-        <section id="time" class="tempo">
-            <section id="period">
-                <button id="seeMore">+</button>
-            </section>
-            <section id="extract"></section>
-        </section>
+
+
+        <div id="time" class="tempo">
+            <div class="period">
+                <button class="selectTime">Select time</button>
+            </div>
+
+            <div class="extract"></div>
+        </div>
+
+
     </body>
 </html>
