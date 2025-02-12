@@ -7,7 +7,6 @@
 
 
     <body>
-        <script src="./src/index.js" type="module"></script>
 
 
         <header >
@@ -17,13 +16,13 @@
         </header>
 
 
-        <div id="intputAndOutput" class="inputAndOutput" >
+        <div id="intputAndOutput" class="inputAndOutput">
             <div id="input" class="textOutput"></div>
+                <ul id="listExpenses"></ul>
             <div id="output" class="textInput">
-                <button class="enterButton">enter</button>
+                <input type="text" class="inputText" placeholder="Input your expense">
+                <button class="enterButton" id="enterButton">enter</button>
             </div>
-            
-            
         </div>
 
 
@@ -42,6 +41,6 @@
             <div class="extract"></div>
         </div>
 
-
+        <script src="./src/index.js" type="module"></script>
     </body>
 </html>
