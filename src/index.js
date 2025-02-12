@@ -1,57 +1,47 @@
-// Seleciona o botão "Enter", o campo de input e a área onde serão exibidas as despesas
+// Seleciona o botão enter, o campo de input e a área onde serão exibidas as despesas
 const saveTextButton = document.querySelector('.enterButton');
 const userText = document.querySelector('.inputText');
-const listExpenses = document.getElementById("listExpenses");
+const listExpenses = document.getElementById('listExpenses');
+const database = [];
 
-// Retorna a data e hora formatadas no padrão brasileiro (dd/mm/aaaa hh:mm)
+// Retorna a data e hora formatadas (dd/mm/aaaa hh:mm)
 function getTime() {
-    const date = new Date();
-    return new Intl.DateTimeFormat('pt-BR', {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
-        hour: '2-digit',
-        minute: '2-digit',
-    }).format(date);
+  const date = new Date();
+  return new Intl.DateTimeFormat('pt-BR', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+  }).format(date);
+}
+
+// Função para atualizar a lista de despesas na tela
+function renderExpenses() {
+  listExpenses.innerHTML = ''; // Limpa a lista de despesas
+
+  // Adiciona cada despesa na lista
+  database.forEach(({ text, date }) => {
+    let expense = document.createElement('p');
+    expense.innerText = `Gasto: R$${text}`;
+    let dateElement = document.createElement('p');
+    dateElement.innerText = `Data: ${date}`;
+
+    // Adiciona os elementos na lista de despesas
+    listExpenses.appendChild(expense);
+    listExpenses.appendChild(dateElement);
+  });
 }
 
 // Adiciona evento ao botão para salvar a despesa e exibi-la na tela
 saveTextButton.addEventListener('click', () => {
-    const savedText = userText.value.trim(); // Remove espaços extras
+  const savedText = userText.value.trim();
+  if (savedText) {
+    // Salva a despesa no banco de dados
+    const expenseData = { text: savedText, date: getTime() };
+    database.push(expenseData);
 
-    if (savedText) {
-        // Salva a despesa no localStorage
-        localStorage.setItem('savedText', savedText);
-
-        // Cria os elementos para exibir o gasto e a data
-        let expense = document.createElement("p");
-        expense.innerText = `Gasto: R$${savedText}`;
-        let date = document.createElement("p");
-        date.innerText = `Data: ${getTime()}`;
-
-        // Adiciona os elementos na lista de despesas
-        listExpenses.appendChild(expense);
-        listExpenses.appendChild(date);
-
-        // Limpa o campo de input após o envio
-        userText.value = '';
-    }
-});
-
-// Exibe a despesa salva no localStorage ao recarregar a página
-window.addEventListener('load', () => {
-    const savedText = localStorage.getItem('savedText');
-
-    if (savedText) {
-        let expense = document.createElement("p");
-        expense.innerText = `Gasto: R$${savedText}`;
-        let date = document.createElement("p");
-        date.innerText = `Data: ${getTime()}`;
-
-        listExpenses.appendChild(expense);
-        listExpenses.appendChild(date);
-
-         // Remove a despesa do localStorage
-        localStorage.removeItem('savedText');
-    }
+    renderExpenses(); // Atualiza a lista na tela
+    userText.value = ''; // Limpa o campo de input
+  }
 });
