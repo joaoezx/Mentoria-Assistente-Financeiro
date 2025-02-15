@@ -1,0 +1,73 @@
+
+.inputAndOutput {
+    height: 80%;
+    width: 65%;
+    position: relative;
+    background-color: #678581;
+    border: 1px solid #81a8a3 ;
+    border-radius: 15px;
+    box-shadow: black;
+    top: 10%;
+    left: 50px ;
+    box-sizing: border-box ;
+}
+
+
+.textOutput {
+    height: 90%;
+    width: calc(100% - 4%);
+    position: relative;
+    background-color: rgb(217, 235, 230);
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 15px;
+    margin: 2%;
+    box-sizing: border-box ;
+    
+}
+
+.inputText {
+    height: 40px;
+    width: 50%;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    margin-left: 25%;
+    bottom: 1.5vh;
+    border-radius: 15px;
+    box-sizing: border-box ;
+
+}
+
+.enterButton {
+    background-color: #52bbe4;
+    border-radius: 15px;
+    height: 38px;
+    position: relative;
+    left:0px ;
+    bottom: 1.5vh;
+    box-sizing: border-box ;
+    
+    
+
+}
+
+
+.boxOutput {
+    position: relative;
+    background-color: #62c2c4;
+    height: 80px;
+    width: 500px;
+    border-radius: 15px;
+    display: flex;
+    left: 22%;
+    margin: 5%;
+
+
+}
+
+.listExpenses {
+    position: relative;
+    display: block;
+    
+    
+}

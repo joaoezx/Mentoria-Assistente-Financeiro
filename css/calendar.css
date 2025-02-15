@@ -1,0 +1,37 @@
+.tempo { 
+    height: 80%;
+    width: 29%;
+    background-color: #678581;
+    border-radius: 15px;
+    position: absolute;
+    top: 16.25vh;
+    left: 68.8vw;
+
+    
+}
+
+.period {
+    height: 60px;
+    width: 470px;
+    background-color: rgb(217, 235, 230);
+    margin: 15px;
+    border-radius: 15px;
+
+
+}
+
+.selectTime {
+    position: relative;
+    left: 80%;
+    top: 30%;
+    border-radius: 15px;
+    background-color: #52bbe4;
+}
+
+.extract {
+    height: 495px;
+    width: 470px;
+    border-radius: 15px;
+    margin: 15px;
+    background-color: rgb(255, 255, 255);
+}

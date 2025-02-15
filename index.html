@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>AI personal financial</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/statics.css">
+        <link rel="stylesheet" href="css/calendar.css">
+        <link rel="stylesheet" href="css/inputAndOutput.css">
     </head>
 
 
     <body>
+
+        
 
 
         <header >
@@ -17,20 +24,30 @@
 
 
         <div id="intputAndOutput" class="inputAndOutput">
-            <div id="input" class="textOutput"></div>
-                <ul id="listExpenses"></ul>
-            <div id="output" class="textInput">
+            <div  class="textOutput">
+                <div>
+                <ul id="listExpenses" class="listExpenses"> </ul>
+            </div>
+            </div>
+                
+            <div id="output" >
                 <input type="text" class="inputText" placeholder="Input your expense">
                 <button class="enterButton" id="enterButton">enter</button>
             </div>
         </div>
 
 
-        <section class="bankBalanceInformations">
-            <section class="balance"></section>
-            <section class="future"></section>
-            <section class="past"></section>
-        </section>
+        <div class="bankBalanceInformations">
+            <div class="counter" id="counterDiv">
+                <p id="counterP" class="bankBalanceInformationsP"></p>
+            </div>
+            <div id="time" class="future">
+                <p id="timeP" class="bankBalanceInformationsP" ></p>
+            </div>
+            <div id="lastInput" class="lastInput">
+                <p id="lastInputTimeP" class="bankBalanceInformationsP"></p>
+            </div>
+        </div>
 
 
         <div id="time" class="tempo">

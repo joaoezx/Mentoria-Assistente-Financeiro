@@ -1,0 +1,51 @@
+.bankBalanceInformations {
+    height: 70px;
+    width: 800px;
+    border-radius: 15px;
+    background-color: #678581;
+    position: absolute;
+    top:60px;
+    right:50px;
+    
+
+}
+
+.counter { 
+    height: 50px;
+    width: 250px;
+    border-radius: 15px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    top: 0px;
+
+}
+
+.future { 
+    position: absolute;
+    height: 50px;
+    width: 250px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    top: 0px;
+    left: 266px;
+
+}
+
+.lastInput { 
+    position: absolute;
+    height: 50px;
+    width: 250px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    top: 0px;
+    left: 530px;
+
+}
+
+.bankBalanceInformationsP {
+
+    justify-self: center;
+}
