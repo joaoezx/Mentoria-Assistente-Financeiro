@@ -18,22 +18,20 @@ function getTime() {
 
 // Função para atualizar a lista de despesas na tela
 function renderExpenses() {
-  listExpenses.innerHTML = ''; // Limpa a lista de despesas
+  listExpenses.innerHTML = '';
 
-  // Adiciona cada despesa na lista
   database.forEach(({ text, date }) => {
     let expense = document.createElement('p');
     expense.innerText = `Gasto: R$${text}`;
     let dateElement = document.createElement('p');
     dateElement.innerText = `Data: ${date}`;
 
-    // Adiciona os elementos na lista de despesas
+    // Adiciona os elementos
     listExpenses.appendChild(expense);
     listExpenses.appendChild(dateElement);
   });
 }
 
-// Adiciona evento ao botão para salvar a despesa e exibi-la na tela
 saveTextButton.addEventListener('click', () => {
   const savedText = userText.value.trim();
   if (savedText) {
